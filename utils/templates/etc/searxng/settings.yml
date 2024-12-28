@@ -9,10 +9,10 @@ search:
   autocomplete: 'duckduckgo'
 
 server:
-  secret_key: "QwErTyUiOpAsDfGhJkLzXcVbNm"  # Update this!
+  secret_key: "QwErTyUiOpAsDfGhJkLzXcVbNm" 
   limiter: true
   image_proxy: true
-  base_url: http:/searxng.koyeb.app  # Optional
+  base_url: http:/searxng.koyeb.app 
 
 redis:
   url: unix:///usr/local/searxng-redis/run/redis.sock?db=0
