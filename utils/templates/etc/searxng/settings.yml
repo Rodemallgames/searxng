@@ -9,7 +9,7 @@ search:
   autocomplete: 'duckduckgo'
 
 server:
-  secret_key: "your_secret_key_here"  # Update this!
+  secret_key: "QwErTyUiOpAsDfGhJkLzXcVbNm"  # Update this!
   limiter: true
   image_proxy: true
   base_url: http:/searxng.koyeb.app  # Optional
