@@ -1,5 +1,3 @@
-# SearXNG settings
-
 use_default_settings: true
 
 general:
@@ -11,64 +9,25 @@ search:
   autocomplete: 'duckduckgo'
 
 server:
-  # Is overwritten by ${SEARXNG_SECRET}
-  secret_key: "ultrasecretkey"
+  secret_key: "your_secret_key_here"  # Update this!
   limiter: true
   image_proxy: true
-  # public URL of the instance, to ensure correct inbound links. Is overwritten
-  # by ${SEARXNG_URL}.
-  # base_url: http://example.com/location
+  base_url: http:/searxng.koyeb.app  # Optional
 
 redis:
-  # URL to connect redis database. Is overwritten by ${SEARXNG_REDIS_URL}.
   url: unix:///usr/local/searxng-redis/run/redis.sock?db=0
 
 ui:
   static_use_hash: true
-
-# preferences:
-#   lock:
-#     - autocomplete
-#     - method
 
 enabled_plugins:
   - 'Hash plugin'
   - 'Self Information'
   - 'Tracker URL remover'
   - 'Ahmia blacklist'
-  # - 'Hostnames plugin'  # see 'hostnames' configuration below
-  # - 'Open Access DOI rewrite'
-
-# plugins:
-#   - only_show_green_results
-
-# hostnames:
-#   replace:
-#     '(.*\.)?youtube\.com$': 'invidious.example.com'
-#     '(.*\.)?youtu\.be$': 'invidious.example.com'
-#   remove:
-#     - '(.*\.)?facebook.com$'
-#   low_priority:
-#     - '(.*\.)?google\.com$'
-#   high_priority:
-#     - '(.*\.)?wikipedia.org$'
 
 engines:
+  - name: google
+  - name: duckduckgo
+  - name: bing
 
-#   - name: fdroid
-#     disabled: false
-#
-#   - name: apk mirror
-#     disabled: false
-#
-#   - name: mediathekviewweb
-#     categories: TV
-#     disabled: false
-#
-#   - name: invidious
-#     disabled: false
-#     base_url:
-#       - https://invidious.snopyta.org
-#       - https://invidious.tiekoetter.com
-#       - https://invidio.xamh.de
-#       - https://inv.riverside.rocks
